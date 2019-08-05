@@ -2,12 +2,12 @@ import React, { useContext } from 'react'
 import { Button } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
-import BooksContext from '../context/books-context'
+import BudgetContext from '../context/budget-context'
 import UserContext from '../context/user-context'
-import { deleteBook } from '../actions/books'
+import { deleteBook } from '../actions/budget'
 
 const BookList = ({ id }) => {
-  const { dispatch } = useContext(BooksContext)
+  const { dispatch } = useContext(BudgetContext)
   const { uid } = useContext(UserContext)
 
   return (

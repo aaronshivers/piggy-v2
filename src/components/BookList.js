@@ -1,15 +1,15 @@
 import React, { useEffect, useContext } from 'react'
 import { Table } from 'react-bootstrap'
-import BooksContext from '../context/books-context'
+import BudgetContext from '../context/budget-context'
 import UserContext from '../context/user-context'
 import DeleteButton from './DeleteButton'
-import { getBooks } from '../actions/books'
+import { getBooks } from '../actions/budget'
 
 const BookList = () => {
-  const { state, dispatch } = useContext(BooksContext)
+  const { state, dispatch } = useContext(BudgetContext)
   const { uid } = useContext(UserContext)
 
-  // Populate books on page load
+  // Populate budget on page load
   useEffect(() => {
     getBooks()(dispatch)(uid)
   }, [])

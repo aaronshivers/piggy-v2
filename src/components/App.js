@@ -1,22 +1,24 @@
 import React, { useReducer, useContext } from 'react'
 import { Container } from 'react-bootstrap'
-import BooksContext from '../context/books-context'
-import booksReducer from '../reducers/books'
+import BudgetContext from '../context/budget-context'
+import budgetReducer from '../reducers/budget'
 import Navigation from './Navigation'
+import Income from './Income'
 import BookForm from './BookForm'
 import BookList from './BookList'
 
 const App = () => {
-  const [ state, dispatch ] = useReducer(booksReducer, [])
+  const [ state, dispatch ] = useReducer(budgetReducer, [])
 
   return (
-    <BooksContext.Provider value={ { state, dispatch } }>
+    <BudgetContext.Provider value={ { state, dispatch } }>
       <Navigation />
       <Container className="mt-4 mb-4">
+        <Income />
         <BookForm />
         <BookList />
       </Container>
-    </BooksContext.Provider>
+    </BudgetContext.Provider>
   )
 }
 
