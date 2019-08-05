@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBook } from '@fortawesome/free-solid-svg-icons'
+import { faPiggyBank } from '@fortawesome/free-solid-svg-icons'
 import UserContext from '../context/user-context'
 import LoginLogoutButton from './LoginLogoutButton'
 
@@ -11,8 +11,8 @@ const Navigation = () =>{
   return (
     <Navbar>
       <Navbar.Brand className="mr-auto">
-        <FontAwesomeIcon icon={ faBook } className="mr-1 text-warning" />
-        MyBookList
+        <FontAwesomeIcon icon={ faPiggyBank } className="mr-1 text-primary" />
+        Piggy
       </Navbar.Brand>
       <LoginLogoutButton uid={ uid } />
     </Navbar>
@@ -20,13 +20,3 @@ const Navigation = () =>{
 }
 
 export default Navigation
-
-    // <Navbar>
-    //   <Navbar.Brand>
-    //     <FontAwesomeIcon icon={ faBook } className="mr-1 text-warning" />
-    //     MyBookList
-    //   </Navbar.Brand>
-    //   <Form inline>
-    //     <LoginLogoutButton uid={ uid } />
-    //   </Form>
-    // </Navbar>
