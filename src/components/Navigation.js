@@ -10,9 +10,11 @@ const Navigation = () =>{
 
   return (
     <Navbar>
-      <Navbar.Brand className="mr-auto">
-        <FontAwesomeIcon icon={ faPiggyBank } className="mr-1 text-primary" />
-        Piggy
+      <Navbar.Brand className="mr-auto" href="/">
+        <h3>
+          <FontAwesomeIcon icon={ faPiggyBank } className="mr-1 text-primary" />
+          Piggy
+        </h3>
       </Navbar.Brand>
       <LoginLogoutButton uid={ uid } />
     </Navbar>
